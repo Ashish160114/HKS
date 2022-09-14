@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "52.5.173.237",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
