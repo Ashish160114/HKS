@@ -11,7 +11,6 @@ export class LoginService {
   api = "52.5.173.237/login.php"
 
   getLogin(email: any, password: any) {
-
     return this.http.post(this.api, { email: email, password: password })
   }
 }

@@ -29,13 +29,13 @@ export class LoginFormComponent implements OnInit {
   }
   onSubmit() {
     if (this.reactiveForm.status == 'INVALID') return
-
+    this.router.navigate(['/dashboard'])
     this.login.getLogin(this.reactiveForm.controls['email'].value, this.reactiveForm.controls['password'].value).subscribe((res: any) => {
       if (res.status) {
         this.snackbar.open('Login Successfully.', '', {
           duration: 3000
         });
-        this.router.navigate(['/dashboard'])
+        // this.router.navigate(['/dashboard'])
       }
       else {
         this.snackbar.open('Invalid Credentials.', '', {
